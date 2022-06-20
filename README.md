@@ -1,11 +1,14 @@
 # Getting-and-Cleaning-Data-Course-Project
-==================================================================
-
 Project for the coursera course: Getting and Cleaning Data
-
-Brendan Brogan
 ==================================================================
+
+Project by: Brendan Brogan
+Based on : Human Activity Recognition Using Smartphones Data Set by UCI
+Source: Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. A Public Domain Dataset for Human Activity Recognition Using Smartphones. 21th European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning, ESANN 2013. Bruges, Belgium 24-26 April 2013.
+Original data link: https://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
 Summary
+==================================================================
 
 This repository extracts the data from the "Human Activity Recognition Using Smartphones Data Set" from University of California Irvine. This was an experiment in which 30 subjects performed 6 different activites, walking on a flat surface, walking uphill, walking downhill, standing still, sitting, and laying down. The data was taken using a Samsung smartphone and the built in accelerometer and gyroscope. This data was split 30/70 into a test and train set. From this dataset, the following files were used in this project:
 X_test, y_test, X_train, y_train, subject_test, subect_train, features, and activity_labels files were used to gather this data.
@@ -14,9 +17,8 @@ The run.analysis.R script combines all of these files into a tidy dataset. The X
 
 With the mergeddata dataset, the data was grouped by the activity performed and the subject performing the activity. From there, each variable was averaged to create the summarydata file. 
 
+Files
 ==================================================================
-
-Files:
 
 The files included in this project are:
 
