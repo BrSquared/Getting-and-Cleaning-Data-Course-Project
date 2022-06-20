@@ -13,8 +13,8 @@ subjecttest <- read.table("./data/subject_test.txt")
 subjecttrain <- read.table("./data/subject_train.txt")
 featurenames <- read.table("./data/features.txt")
 
-##Needed features: After 166 may not be necessary
-features <- c(1:6,41:46,81:86,121:126,161:166,201:202,214:215,227:228,240:241,253:254,266:271,294:296,345:350,373:375,424:429,452:454,503:504,513,516:517, 529:530,542:543)
+##Needed features: After 166 may not be necessary   
+features <- c(1:6,41:46,81:86,121:126,161:166) ##,201:202,214:215,227:228,240:241,253:254,266:271,294:296,345:350,373:375,424:429,452:454,503:504,513,516:517, 529:530,542:543)
 
 ##Extracting the necessary data and adding some formatting
 traindf <- xtrain[,features]
@@ -33,5 +33,8 @@ alldata$activity <- as.factor(alldata$activity)
 levels(alldata$activity) <- c("walking","walking.upstairs","walking.downstairs","sitting","standing","laying")
 
 ## Creating the summary table
-summary <- aggregate(alldata[,3:ncol(alldata)],list(activity = alldata$activity
+summarydata <- aggregate(alldata[,3:ncol(alldata)],list(activity = alldata$activity
                                                 ,subject = alldata$subject),mean)
+##Exporting the data into a file
+write.table(alldata, file = "./data/mergeddata.txt")
+write.table(summarydata, file = "./data/summarydata.txt", row.names = FALSE)
